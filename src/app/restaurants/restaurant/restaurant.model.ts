@@ -7,5 +7,4 @@ export class Restaurant {
   imagePath: string;
   about: string;
   hours: string;
-
 }
