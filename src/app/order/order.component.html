@@ -19,43 +19,61 @@
                     <p class="lead">Endereço de Entrega:</p>
                 </div>
                 <div class="col-sm-6 col-xs-12">
-                    <div class="form-group">
-                        <label class="control-label sr-only" for="inputSuccess">
+                    <div class="form-group"
+                        [class.has-success]="iptAddress.valid && (iptAddress.dirty || iptAddress.touched)"
+                        [class.has-error]="iptAddress.invalid && (iptAddress.dirty || iptAddress.touched)">
+                        <label class="control-label sr-only" for="address">
                             <i class="fa fa-check"></i> Endereço
                         </label>
                         <input ngModel
+                            #iptAddress="ngModel"
                             type="text"
                             class="form-control"
                             name="address"
-                            id="inputSuccess"
                             placeholder="Endereço"
                             autocomplete="off"
                             required/>
-                        <span class="help-block"></span>
+                        <span class="help-block" *ngIf="iptAddress.valid && (iptAddress.dirty || iptAddress.touched)">
+                            <i class="fa fa-check"></i> Ok
+                        </span>
+                        <span class="help-block" *ngIf="iptAddress.invalid && (iptAddress.dirty || iptAddress.touched)">
+                            <i class="fa fa-remove"></i> Campo Obrigatório
+                        </span>
                     </div>
                 </div>
                 <div class="col-sm-2 col-xs-6">
-                    <div class="form-group has-success">
-                        <label class="control-label sr-only" for="inputSuccess">
+                    <div class="form-group"
+                        [class.has-success]="iptNumber.valid && (iptNumber.dirty || iptNumber.touched)"
+                        [class.has-error]="iptNumber.invalid && (iptNumber.dirty || iptNumber.touched)">
+                        <label class="control-label sr-only" for="number">
                             <i class="fa fa-check"></i> Número
                         </label>
                         <input ngModel
+                            #iptNumber="ngModel"
                             type="text"
                             class="form-control"
                             name="number"
-                            id="inputSuccess"
                             placeholder="Número"
                             autocomplete="off"
                             required/>
-                        <span class="help-block"><i class="fa fa-check"></i> Ok</span>
+                            <span class="help-block" *ngIf="iptNumber.valid && (iptNumber.dirty || iptNumber.touched)">
+                                <i class="fa fa-check"></i> Ok
+                            </span>
+                            <span class="help-block" *ngIf="iptNumber.invalid && (iptNumber.dirty || iptNumber.touched)">
+                                <i class="fa fa-remove"></i> Campo Obrigatório
+                            </span>
                     </div>
                 </div>
                 <div class="col-sm-4 col-xs-6">
                     <div class="form-group has-error">
-                        <label class="control-label sr-only" for="inputSuccess">
+                        <label class="control-label sr-only" for="optional">
                             <i class="fa fa-check"></i> Complemento
                         </label>
-                        <input type="text" class="form-control" name="optional" id="inputSuccess" placeholder="Complemento" ngModel/>
+                        <input ngModel
+                            type="text"
+                            class="form-control"
+                            name="optional"
+                            placeholder="Complemento"/>
                         <span class="help-block">
                             <i class="fa fa-remove"></i> Help block with error
                         </span>
