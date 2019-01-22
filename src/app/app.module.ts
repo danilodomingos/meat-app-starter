@@ -13,8 +13,6 @@ import { RestaurantsComponent } from './restaurants/restaurants.component';
 
 import { MenuComponent } from './restaurant-detail/menu/menu.component';
 import { MenuItemComponent } from './restaurant-detail/menu-item/menu-item.component';
-import { OrderComponent } from './order/order.component';
-import { OrderItemsComponent } from './order/order-items/order-items.component';
 import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail.component';
 import { RestaurantsService } from './restaurants/restaurants.service';
 import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component';
@@ -29,8 +27,6 @@ import { ShoppingCartService } from './restaurant-detail/shopping-cart/shopping-
         HomeComponent,
         MenuComponent,
         MenuItemComponent,
-        OrderComponent,
-        OrderItemsComponent,
         RestaurantComponent,
         RestaurantDetailComponent,
         RestaurantsComponent,
