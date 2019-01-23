@@ -10,6 +10,7 @@ import { RadioOption } from 'app/shared/radio/radio-option.model';
 })
 export class OrderComponent implements OnInit {
 
+    delivery = 8;
     paymentOptions: RadioOption[] = [
         {label: 'Dinheiro', value: 'MON'},
         {label: 'Cartão de Débito', value: 'DEB'},
@@ -19,6 +20,10 @@ export class OrderComponent implements OnInit {
     constructor(private orderService: OrderService) {}
 
     ngOnInit() {}
+
+    itemsValue(): number {
+        return this.orderService.itemsValue();
+    }
 
     cartItems(): CartItem[] {
         return this.orderService.cartItems();
