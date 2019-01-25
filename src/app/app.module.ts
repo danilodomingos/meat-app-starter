@@ -8,6 +8,7 @@ import { ROUTES } from './app.routes';
 
 import { AboutComponent } from './about/about.component';
 import { AppComponent } from './app.component';
+import { DeliveryCostsComponent } from './order/delivery-costs/delivery-costs.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { InputComponent } from './shared/input/input.component';
@@ -16,7 +17,9 @@ import { MenuItemComponent } from './restaurant-detail/menu-item/menu-item.compo
 import { OrderComponent } from './order/order.component';
 import { OrderItemsComponent } from './order/order-items/order-items.component';
 import { OrderService } from './order/order.service';
+import { OrderSummaryComponent } from './order-summary/order-summary.component';
 import { RadioComponent } from './shared/radio/radio.component';
+import { RatingComponent } from './shared/rating/rating.component';
 import { RestaurantComponent } from './restaurants/restaurant/restaurant.component';
 import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
@@ -24,8 +27,6 @@ import { RestaurantsService } from './restaurants/restaurants.service';
 import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component';
 import { ShoppingCartComponent } from './restaurant-detail/shopping-cart/shopping-cart.component';
 import { ShoppingCartService } from './restaurant-detail/shopping-cart/shopping-cart.service';
-import { DeliveryCostsComponent } from './order/delivery-costs/delivery-costs.component';
-import { OrderSummaryComponent } from './order-summary/order-summary.component';
 
 @NgModule({
     declarations: [
@@ -46,6 +47,7 @@ import { OrderSummaryComponent } from './order-summary/order-summary.component';
         ShoppingCartComponent,
         DeliveryCostsComponent,
         OrderSummaryComponent,
+        RatingComponent,
     ],
     imports: [
         BrowserModule,
