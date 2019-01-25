@@ -49,6 +49,7 @@ export class OrderService {
                         JSON.stringify(order),
                         new RequestOptions({headers: headers}))
                         .map(response => response.json())
+                        // tslint:disable-next-line:no-shadowed-variable
                         .map(order => order.id);
     }
 
