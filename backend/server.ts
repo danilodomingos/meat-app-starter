@@ -24,7 +24,7 @@ server.use(jsonServer.bodyParser);
 // });
 
 server.get('/login', handleAuthentication);
-server.use('/orders', handleAuthorization)
+server.use('/orders', handleAuthorization);
 
 // Use default router
 server.use(router);
