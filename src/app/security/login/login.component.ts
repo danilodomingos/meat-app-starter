@@ -1,14 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'mt-login',
-  templateUrl: './login.component.html'
+    selector: 'mt-login',
+    templateUrl: './login.component.html'
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+    loginForm: FormGroup;
 
-  ngOnInit() {
-  }
+    constructor(private fb: FormBuilder) {}
 
+    ngOnInit() {
+        this.loginForm = this.fb.group({
+            email: ['', [Validators.email, Validators.required]],
+            password: ['', Validators.required]
+        });
+    }
 }
