@@ -1,8 +1,10 @@
 import { handleAuthentication } from './auth';
-import * as jsonServer from 'json-server';
+import { handleAuthorization } from './authz';
 import {Express} from 'express';
+
 import * as fs from 'fs';
 import * as https from 'https';
+import * as jsonServer from 'json-server';
 
 
 const server: Express = jsonServer.create();
@@ -22,6 +24,7 @@ server.use(jsonServer.bodyParser);
 // });
 
 server.get('/login', handleAuthentication);
+server.use('/orders', handleAuthorization)
 
 // Use default router
 server.use(router);
