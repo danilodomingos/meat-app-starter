@@ -6,6 +6,7 @@ import { InputComponent } from './input/input.component';
 import { RadioComponent } from './radio/radio.component';
 import { RatingComponent } from './rating/rating.component';
 
+import { LoginService } from './../security/login/login.service';
 import { OrderService } from './../order/order.service';
 import { RestaurantsService } from './../restaurants/restaurants.service';
 import { ShoppingCartService } from './../restaurant-detail/shopping-cart/shopping-cart.service';
@@ -38,6 +39,7 @@ export class SharedModule {
             providers: [
                 ShoppingCartService,
                 RestaurantsService,
+                LoginService,
                 OrderService
             ]
         };

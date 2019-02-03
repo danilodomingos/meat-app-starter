@@ -23,7 +23,7 @@ server.use(jsonServer.bodyParser);
 //     resp.json({message: 'ok'});
 // });
 
-server.get('/login', handleAuthentication);
+server.post('/login', handleAuthentication);
 server.use('/orders', handleAuthorization);
 
 // Use default router
