@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { RouterModule, PreloadAllModules } from '@angular/router';
 
@@ -37,7 +37,7 @@ import { LoginComponent } from './security/login/login.component';
     ],
     imports: [
         BrowserModule,
-        HttpModule,
+        HttpClientModule,
         RouterModule.forRoot(ROUTES, {preloadingStrategy: PreloadAllModules}),
         SharedModule.forRoot(),
     ],
