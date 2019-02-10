@@ -7,6 +7,7 @@ import { RadioComponent } from './radio/radio.component';
 import { RatingComponent } from './rating/rating.component';
 import { SnackbarComponent } from './messages/snackbar/snackbar.component';
 
+import { NotificationService } from './messages/notification.service';
 import { OrderService } from './../order/order.service';
 import { RestaurantsService } from './../restaurants/restaurants.service';
 import { ShoppingCartService } from './../restaurant-detail/shopping-cart/shopping-cart.service';
@@ -25,13 +26,13 @@ import { ShoppingCartService } from './../restaurant-detail/shopping-cart/shoppi
     SnackbarComponent
   ],
   exports: [
+    CommonModule,
+    FormsModule,
     InputComponent,
     RadioComponent,
     RatingComponent,
-    SnackbarComponent,
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SnackbarComponent
   ]
 })
 export class SharedModule {
@@ -40,9 +41,10 @@ export class SharedModule {
         return {
             ngModule: SharedModule,
             providers: [
-                ShoppingCartService,
+                NotificationService,
+                OrderService,
                 RestaurantsService,
-                OrderService
+                ShoppingCartService
             ]
         };
     }
