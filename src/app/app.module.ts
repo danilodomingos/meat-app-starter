@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpModule } from '@angular/http';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { RouterModule, PreloadAllModules } from '@angular/router';
 
@@ -39,7 +39,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     imports: [
         BrowserAnimationsModule,
         BrowserModule,
-        HttpModule,
+        HttpClientModule,
         RouterModule.forRoot(ROUTES, {preloadingStrategy: PreloadAllModules}),
         SharedModule.forRoot(),
     ],
