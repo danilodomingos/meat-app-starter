@@ -7,6 +7,7 @@ import { RadioComponent } from './radio/radio.component';
 import { RatingComponent } from './rating/rating.component';
 import { SnackbarComponent } from './messages/snackbar/snackbar.component';
 
+import { LoginService } from './../security/login/login.service';
 import { NotificationService } from './messages/notification.service';
 import { OrderService } from './../order/order.service';
 import { RestaurantsService } from './../restaurants/restaurants.service';
@@ -41,6 +42,7 @@ export class SharedModule {
         return {
             ngModule: SharedModule,
             providers: [
+                LoginService,
                 NotificationService,
                 OrderService,
                 RestaurantsService,

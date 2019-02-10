@@ -19,6 +19,7 @@ import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component'
 import { ShoppingCartComponent } from './restaurant-detail/shopping-cart/shopping-cart.component';
 
 import { SharedModule } from './shared/shared.module';
+import { LoginComponent } from './security/login/login.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
@@ -34,6 +35,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
         RestaurantsComponent,
         ReviewsComponent,
         ShoppingCartComponent,
+        LoginComponent,
         NotFoundComponent,
     ],
     imports: [
