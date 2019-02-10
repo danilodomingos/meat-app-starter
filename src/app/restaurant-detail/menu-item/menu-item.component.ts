@@ -8,13 +8,13 @@ import { MenuItem } from './menu-item.model';
     templateUrl: './menu-item.component.html',
     animations: [
         trigger('menu-item-appeared', [
-          state('ready', style({ opacity: 1 })),
-          transition('void => ready', [
-              style({opacity: 0, transform: 'translateY(-20px)'}),
-              animate('500ms 0s ease-in')
-          ])
+            state('ready', style({ opacity: 1 })),
+            transition('void => ready', [
+                style({ opacity: 0, transform: 'translateY(-20px)' }),
+                animate('500ms 0s ease-in')
+            ])
         ])
-      ]
+    ]
 })
 export class MenuItemComponent implements OnInit {
 
