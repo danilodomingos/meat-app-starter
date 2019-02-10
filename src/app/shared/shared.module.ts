@@ -5,10 +5,12 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { InputComponent } from './input/input.component';
 import { RadioComponent } from './radio/radio.component';
 import { RatingComponent } from './rating/rating.component';
+import { SnackbarComponent } from './messages/snackbar/snackbar.component';
 
 import { OrderService } from './../order/order.service';
 import { RestaurantsService } from './../restaurants/restaurants.service';
 import { ShoppingCartService } from './../restaurant-detail/shopping-cart/shopping-cart.service';
+
 
 @NgModule({
   imports: [
@@ -19,12 +21,14 @@ import { ShoppingCartService } from './../restaurant-detail/shopping-cart/shoppi
   declarations: [
     InputComponent,
     RadioComponent,
-    RatingComponent
+    RatingComponent,
+    SnackbarComponent
   ],
   exports: [
     InputComponent,
     RadioComponent,
     RatingComponent,
+    SnackbarComponent,
     CommonModule,
     FormsModule,
     ReactiveFormsModule
