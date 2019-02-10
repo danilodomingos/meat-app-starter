@@ -33,13 +33,12 @@ export class SnackbarComponent implements OnInit {
 
   constructor(private notificationService: NotificationService) { }
 
-  ngOnInit() {
-      this.notificationService.notifier
-      .do((message: string) => {
-        this.message = message;
-        this.snackVisibility = 'visible';
-    }).switchMap(message => Observable.timer(3000))
-      .subscribe(timer => this.snackVisibility = 'hidden');
-  }
+    ngOnInit() {
+        this.notificationService.notifier.do((message: string) => {
+            this.message = message;
+            this.snackVisibility = 'visible';
+           }).switchMap(message => Observable.timer(3000))
+        .subscribe(timer => this.snackVisibility = 'hidden');
+    }
 
 }
