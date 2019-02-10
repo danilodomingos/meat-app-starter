@@ -19,6 +19,7 @@ import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component'
 import { ShoppingCartComponent } from './restaurant-detail/shopping-cart/shopping-cart.component';
 
 import { SharedModule } from './shared/shared.module';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
     declarations: [
@@ -33,6 +34,7 @@ import { SharedModule } from './shared/shared.module';
         RestaurantsComponent,
         ReviewsComponent,
         ShoppingCartComponent,
+        NotFoundComponent,
     ],
     imports: [
         BrowserAnimationsModule,
